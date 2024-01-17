@@ -1,0 +1,25 @@
+<div *ngIf="userData; else elseGetDataBlock">
+    <button class="getDataBtn closeBtn" (click)="closeFunc()">Collapse</button>
+</div>
+<ng-template #elseGetDataBlock>
+    <button class="getDataBtn" (click)="getFunc()">Get data</button>
+</ng-template>
+
+<div class="noDataDiv" *ngIf="!userData; else elseDisplayBlock">
+    <img 
+        src="https://t4.ftcdn.net/jpg/04/75/01/23/360_F_475012363_aNqXx8CrsoTfJP5KCf1rERd6G50K0hXw.jpg" 
+        alt="no data"
+    >
+</div>
+<ng-template #elseDisplayBlock>
+    <div class="cardOutside">
+        <div *ngFor="let ele of userData">
+            <div class="cardInside">
+                <h3>{{ele.login}}</h3>
+                <h6>{{ele.node_id.slice(0,10)}}</h6>
+                <img src={{ele.avatar_url}} alt={{ele.login}}>
+            </div>
+        </div>
+    </div>
+</ng-template>
+

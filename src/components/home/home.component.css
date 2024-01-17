@@ -1,0 +1,42 @@
+.getDataBtn{
+    padding: 5px;
+    background: lightblue;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px black;
+    margin: 10px;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-family: cursive;
+    cursor: pointer;
+}
+.closeBtn{
+    background: tomato;
+}
+.cardOutside{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+.cardInside{
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px thistle;
+    font-family: cursive;
+}
+.cardInside img{
+    width: 150px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.noDataDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.noDataDiv img{
+    height: 300px;
+}
